@@ -1,0 +1,35 @@
+# Introduction to LangGraph
+
+LangGraph is a library for building stateful, multi-actor applications with LLMs. It extends LangChain with a graph-based orchestration layer that enables complex agent workflows.
+
+## Key Concepts
+
+### Stateful Execution
+LangGraph maintains state throughout the execution of an agent workflow, allowing for more complex reasoning and decision-making processes. This is particularly useful for multi-step tasks that require memory of previous steps.
+
+### Graph-Based Architecture
+LangGraph uses a directed graph structure to define the flow of execution:
+- **Nodes**: Represent individual components or steps in the workflow
+- **Edges**: Define the possible transitions between nodes
+- **Conditional Logic**: Determines which path to take based on the current state
+
+### Multi-Actor Systems
+LangGraph supports multiple "actors" or agents working together in a coordinated manner, each with their own role and capabilities:
+- Specialized agents for different tasks
+- Communication between agents
+- Coordination of complex workflows
+
+## Common Use Cases
+
+1. **Multi-step reasoning**: Breaking complex problems into manageable steps
+2. **Tool use orchestration**: Managing when and how agents use external tools
+3. **Agentic workflows**: Creating systems of multiple agents working together
+4. **Human-in-the-loop processes**: Integrating human feedback at specific points
+
+## Example: Simple RAG Agent Flow
+
+```
+User Query → Retrieve Context → Analyze Context → (Search for More OR Generate Final Answer)
+```
+
+In this flow, the agent first retrieves relevant context, analyzes whether it's sufficient, and then either searches for more information or provides a final answer based on the available context. 

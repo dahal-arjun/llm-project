@@ -1,0 +1,1 @@
+Vector databases are specialized database systems designed to store and search high-dimensional vectors efficiently.

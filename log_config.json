@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "disable_existing_loggers": false,
+  "formatters": {
+    "json": {
+      "class": "pythonjsonlogger.jsonlogger.JsonFormatter",
+      "format": "%(asctime)s %(name)s %(levelname)s %(message)s %(pathname)s %(lineno)d %(funcName)s %(process)d %(thread)d %(threadName)s"
+    },
+    "standard": {
+      "format": "%(asctime)s [%(levelname)s] %(name)s: %(message)s"
+    },
+    "colored": {
+      "()": "uvicorn.logging.ColourizedFormatter",
+      "format": "%(levelprefix)s %(asctime)s | %(message)s",
+      "use_colors": true
+    }
+  },
+  "handlers": {
+    "console": {
+      "class": "logging.StreamHandler",
+      "formatter": "colored",
+      "stream": "ext://sys.stdout"
+    },
+    "json_console": {
+      "class": "logging.StreamHandler",
+      "formatter": "json",
+      "stream": "ext://sys.stdout"
+    }
+  },
+  "loggers": {
+    "uvicorn": {
+      "handlers": ["console"],
+      "level": "INFO"
+    },
+    "uvicorn.error": {
+      "handlers": ["console"],
+      "level": "INFO",
+      "propagate": false
+    },
+    "uvicorn.access": {
+      "handlers": ["console"],
+      "level": "INFO",
+      "propagate": false
+    },
+    "src": {
+      "handlers": ["json_console"],
+      "level": "INFO",
+      "propagate": false
+    }
+  },
+  "root": {
+    "handlers": ["json_console"],
+    "level": "INFO"
+  }
+} 

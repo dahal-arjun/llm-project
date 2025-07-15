@@ -1,0 +1,33 @@
+# Sample Document for Testing
+
+This is a sample text document that we can use to test the document loading API.
+
+## Features of Vector Databases
+
+Vector databases like Chroma are designed for storing and querying vector embeddings efficiently. They are particularly useful for:
+
+1. Semantic search applications
+2. Recommendation systems
+3. Anomaly detection
+4. Natural language processing tasks
+5. Image and video search
+
+## Integration with LLMs
+
+When combined with Large Language Models (LLMs), vector databases enable:
+
+- Retrieval Augmented Generation (RAG)
+- Long-term memory for AI assistants
+- Knowledge base creation and querying
+- Document summarization and analysis
+
+## Benefits of Chunking
+
+Breaking documents into smaller chunks allows for:
+
+- More precise retrieval of relevant information
+- Better handling of context windows
+- Improved search performance
+- Reduced token usage when working with LLMs
+
+This document should be processed into multiple chunks based on the chunk_size parameter provided to the API. 
